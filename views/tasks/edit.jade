@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1 Edit Task View
+  form(method='post', role='form', action='/tasks/' + task.id + '?_method=PUT')
+    //input(name='_method', value='put', type='hidden')
+    fieldset
+      legend Editing task
+        div.form-group
+          label Task
+          //input.form-control(name='task[task]', class='xlarge', value="#{task.task}")
+          input.form-control(name='task', class='xlarge', value="#{task.task}")
+        button.btn.btn-primary(type='submit') Submit
+        button.btn.btn-default(type='reset') Clear
