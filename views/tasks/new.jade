@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1 New task view
+
+  form(method='post', action='/tasks')
+    .input-group
+      input.form-control(type='text', name='task')
+      span.input-group-btn
+        input.btn.btn-success(type='submit', value ='Add Task')
